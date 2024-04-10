@@ -1,0 +1,14 @@
+<app-topbar></app-topbar>
+<div class="mt-6">
+    <employee-info-card></employee-info-card>
+</div>
+<div class="mt-2">
+    <tekigent-tab-menu 
+        [labelItems]="labelItems" 
+        [activeItem]="activeItem"
+        (handleActiveItemChange)="onActiveItemChange($event)"
+    ></tekigent-tab-menu>
+</div>
+<div class="mt-2">
+    <router-outlet></router-outlet>
+</div>
