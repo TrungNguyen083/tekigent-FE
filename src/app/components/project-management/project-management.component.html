@@ -1,15 +1,19 @@
 <app-topbar></app-topbar>
-<p class="font-bold text-2xl my-2">Evaluation Cycle</p>
-<div class="card-container">
-    <div>
-        <tekigent-tab-menu 
-            [labelItems]="labelItems" 
-            [activeItem]="activeItem"
-            (handleActiveItemChange)="onActiveItemChange($event)"
-        >
-        </tekigent-tab-menu>
+<p class="font-bold text-2xl my-2 text-primaryText">Project</p>
+<div class="flex justify-between">
+    <div class="flex gap-2">
+        <p-dropdown placeholder="Status" [options]="projectStatus" dropdownIcon="pi pi-filter"></p-dropdown>
     </div>
-    <div class="mt-4">
-        <router-outlet></router-outlet>
+    <div class="flex gap-4">
+        <p-dropdown placeholder="Manage" [options]="fiterDropDown" dropdownIcon="pi pi-angle-down"></p-dropdown>
+        <a [routerLink]="['new-cycle']">
+            <p-button label="Create Project" icon="pi pi-plus"></p-button>
+        </a>
     </div>
+</div>
+<div class="mt-4 flex flex-col gap-4">
+    <project-item-card 
+        *ngFor="let project of projects"
+        [project]="project"
+    ></project-item-card>
 </div>
