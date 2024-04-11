@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EvaluationCycleComponent } from './project.component';
+import { ProjectItemCardComponent } from './project-item-card.component';
 import { describe, beforeEach, it } from 'node:test';
 
-describe('EvaluationCycleComponent', () => {
-  let component: EvaluationCycleComponent;
-  let fixture: ComponentFixture<EvaluationCycleComponent>;
+describe('ProjectItemCardComponent', () => {
+  let component: ProjectItemCardComponent;
+  let fixture: ComponentFixture<ProjectItemCardComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [EvaluationCycleComponent]
+      declarations: [ProjectItemCardComponent]
     });
-    fixture = TestBed.createComponent(EvaluationCycleComponent);
+    fixture = TestBed.createComponent(ProjectItemCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

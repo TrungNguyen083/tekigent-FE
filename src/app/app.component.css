@@ -76,6 +76,7 @@
   .p-button {
     @apply border-none bg-primary;
   }
+  
   .p-inputtext:enabled:focus {
     @apply shadow-none border-primary border-opacity-80;
   }

@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProjectManagementComponent } from './project-management.component';
 import { describe, beforeEach, it } from 'node:test';
 
-describe('ProjectManagementComponent', () => {
+describe('ProjectComponent', () => {
   let component: ProjectManagementComponent;
   let fixture: ComponentFixture<ProjectManagementComponent>;
 
