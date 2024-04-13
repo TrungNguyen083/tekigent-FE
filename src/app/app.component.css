@@ -267,8 +267,8 @@
   }
 
   .p-multiselect, .p-dropdown {
-    @apply border-transparent placeholder:opacity-50;
-    background-color: #f5f5f5;
+    @apply border-primary placeholder:opacity-50;
+    background-color: #ffffff;
   }
 
   .p-multiselect .p-multiselect-label, .p-inputwrapper-filled .p-multiselect.p-multiselect-chip .p-multiselect-label {

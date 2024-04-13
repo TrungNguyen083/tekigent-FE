@@ -41,6 +41,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'new-project',
+        loadChildren: () =>
+          import('./components/project-management/project-management.module').then(
+            m => m.ProjectManagementModule,
+          ),
+      },
+      {
         path: 'dashboard',
         loadChildren: () =>
           import('./components/hr-dashboard/hr-dashboard.module').then(

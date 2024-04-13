@@ -6,22 +6,26 @@ import { ProjectManagementComponent } from './project-management.component';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { ProjectItemCardComponent } from './components/project-item-card/project-item-card.component';
-import { EvaluationCycleInfoFormComponent } from './components/evaluation-cycle-info-form/evaluation-cycle-info-form.component';
+import { ProjectInfoFormComponent } from './components/project-info-form/project-info-form.component';
 import { AppTopbarModule } from 'src/app/layout/app-topbar.module';
+import { PaginatorModule } from 'primeng/paginator';
+import { ProjectListComponent } from './components/project-list/project-list.component';
 
 
 @NgModule({
   declarations: [
     ProjectManagementComponent,
+    ProjectListComponent,
     ProjectItemCardComponent,
-    EvaluationCycleInfoFormComponent
+    ProjectInfoFormComponent,
   ],
   imports: [
     CommonModule,
     ProjectManagementRoutingModule,
     ButtonModule,
     DropdownModule,
-    AppTopbarModule
+    AppTopbarModule,
+    PaginatorModule,
   ]
 })
 export class ProjectManagementModule { }

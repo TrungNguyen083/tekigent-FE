@@ -1,0 +1,31 @@
+<p class="font-bold text-2xl my-2 text-primaryText">Project</p>
+<div class="flex justify-between">
+    <div class="flex gap-2">
+        <input type="text" class="form-control border border-primary rounded-lg pl-4"
+            placeholder="Search for a group...">
+        <p-dropdown class="bg-white" placeholder="Collections" [options]="collectionDropdown"
+            dropdownIcon="pi pi-angle-down"></p-dropdown>
+        <p-dropdown placeholder="Appearance" [options]="appearanceDropdown"
+            dropdownIcon="pi pi-angle-down"></p-dropdown>
+    </div>
+    <div class="flex gap-2">
+        <p-dropdown placeholder="Manage" [options]="fiterDropDown" dropdownIcon="pi pi-angle-down"></p-dropdown>
+        <a [routerLink]="['new-project']">
+            <p-button label="Create Project" icon="pi pi-plus"></p-button>
+        </a>
+    </div>
+</div>
+<div class="mt-4 flex flex-col gap-4">
+    <project-item-card *ngFor="let project of projects" [project]="project"></project-item-card>
+</div>
+<div class="flex justify-between mt-4 items-center bg-white">
+    <span class="ml-4">Showing {{table.first}} to
+        {{
+        table.rows! * table.page! > table.totalRecord!
+        ? table.totalRecord
+        : table.rows! * table.page!
+        }}
+        of {{ table.totalRecord }} entries</span>
+    <p-paginator (onPageChange)="onPageChange($event)" [first]="currentPagingInfo.first" [rows]="currentPagingInfo.rows"
+        [totalRecords]="currentPagingInfo.totalRecord"></p-paginator>
+</div>
