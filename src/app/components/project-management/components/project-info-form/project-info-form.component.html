@@ -1,4 +1,142 @@
 <p class="font-bold text-2xl my-2 text-primaryText">Create Project</p>
-<div class="flex justify-between">
-    
+<div class="flex flex-col gap-4">
+    <div class="flex justify-between">
+        <div class="flex flex-col w-96">
+            <h1 class="font-bold text-primaryText mb-2">Project Information</h1>
+            <span class="text-sm max-w-xs">Set up the details for your project</span>
+        </div>
+        <form class="flex flex-1 flex-col gap-4">
+            <div>
+                <label class="block text-gray-700 text-sm font-bold text-primaryText " for="display-name">
+                    Display Name
+                </label>
+                <span class="block text-sm mb-4">Displayed on and below certificates</span>
+                <input
+                    class="block shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="display-name" type="text">
+            </div>
+            <div>
+                <label class="block text-gray-700 text-sm font-bold text-primaryText " for="identifier">
+                    Identifier
+                </label>
+                <span class="block text-sm mb-4">To identify your group on the dashboard - ex. a course code</span>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="identifier" type="text">
+            </div>
+            <div>
+                <label class="block text-gray-700 text-sm font-bold text-primaryText " for="course-website">
+                    Course Website
+                </label>
+                <span class="block text-sm mb-4">This links the credential data record to your information about the
+                    credential on your website.</span>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="course-website" type="url">
+            </div>
+            <div>
+                <label class="block text-gray-700 text-sm font-bold text-primaryText " for="description">
+                    Description
+                </label>
+                <span class="block text-sm mb-4">Increase click-throughs to your website by giving specifics about what
+                    your credential recipients needed to do to earn this credential.</span>
+                <textarea
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="description"></textarea>
+            </div>
+            <div>
+                <label class="block text-gray-700 text-sm font-bold text-primaryText " for="skills">
+                    Skills
+                </label>
+                <span class="block text-sm mb-4">Increase the marketability of your credential by identifying skills
+                    these credential-holders needed to demonstrate (or have learned) in the process of earning this
+                    credential.</span>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="skills" type="text">
+            </div>
+            <div>
+                <label class="block text-gray-700 text-sm font-bold text-primaryText " for="category">
+                    Category
+                </label>
+                <span class="block text-sm mb-4">Type here, then select a category from the list</span>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="category" type="text">
+            </div>
+        </form>
+    </div>
+    <hr
+        class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
+    <div class="flex justify-between">
+        <div class="flex flex-col w-96">
+            <h1 class="font-bold text-primaryText mb-2">Project Appearance</h1>
+            <span class="text-sm max-w-xs">Your group needs a badge or certificate design to be displayed. It can have
+                both. If you add both a certificate and a badge, select which you want to be the Primary representation
+                of this credential.</span>
+        </div>
+        <div class="flex flex-col flex-1 gap-4">
+            <div class="flex gap-4">
+                <div class="flex ml-16 border border-dashed relative">
+                    <img class="max-w-sm rounded-lg"
+                        src="https://v2.dashboard.accredible.com/assets/images/groups/certificate_placeholder.png"
+                        alt="certificate">
+                    <button class="absolute top-2 right-2 mt-2 mr-2 bg-gray-200 hover:bg-gray-300 rounded p-2">
+                        <i class="pi pi-pencil p-2"></i>
+                    </button>
+                </div>
+                <div class="flex ml-36 border border-dashed relative">
+                    <img class="max-w-sm rounded-lg"
+                        src="https://v2.dashboard.accredible.com/assets/images/groups/badge_placeholder.png"
+                        alt="badge">
+                    <button class="absolute top-2 right-2 mt-2 mr-2 bg-gray-200 hover:bg-gray-300 rounded p-2">
+                        <i class="pi pi-pencil p-2"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="flex">
+                <label class="block text-gray-700 text-sm font-bold text-primaryText " for="display-name">
+                    Primary:
+                </label>
+                <div class="flex">
+                    <div class="flex items-center me-4 ml-16">
+                        <input id="inline-radio" type="radio" value="" name="inline-radio-group"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-radio" class="ms-2 text-sm font-medium text-primary">Certificate</label>
+                    </div>
+                    <div class="flex items-center me-4 ml-8">
+                        <input id="inline-2-radio" type="radio" value="" name="inline-radio-group"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-2-radio" class="ms-2 text-sm font-medium text-primary">Badge</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr
+        class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
+    <div class="flex justify-between">
+        <div class="flex flex-col w-96">
+            <h1 class="font-bold text-primaryText mb-2">Earning Criteria (Optional)</h1>
+            <span class="text-sm max-w-xs">Define recipient prerequisites for this credential. Appears on the
+                recipient's credential page and your public credential page.</span>
+        </div>
+        <div class="flex flex-col flex-1">
+            <div class="bg-white rounded">
+                <div *ngFor="let index of criteriaIndices; let i = index">
+                    <project-earning-criteria [index]="i"
+                        (deleteCriteria)="removeEarningCriteria($event)"></project-earning-criteria>
+                </div>
+            </div>
+            <button (click)="addEarningCriteria()"
+                class="text-primaryText font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center w-fit">
+                Add Earning Criteria
+                <i class="pi pi-plus ml-4"></i>
+            </button>
+        </div>
+    </div>
+    <button class="bg-primary flex items-center text-white font-bold py-2 px-4 rounded text-lg w-fit">
+        Save
+    </button>
 </div>

@@ -15,12 +15,24 @@ const collectionDropdown = [
 
 const appearanceDropdown = [
   {
-    label: 'Fully Configured',
+    label: 'All',
     value: 1,
   },
   {
-    label: 'Configured not complete',
+    label: 'Certificate',
     value: 2,
+  },
+  {
+    label: 'Badge',
+    value: 3,
+  },
+  {
+    label: 'Certificate & Badge',
+    value: 4,
+  },
+  {
+    label: 'No Design',
+    value: 5,
   },
 ];
 

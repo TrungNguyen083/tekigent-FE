@@ -10,6 +10,7 @@ import { ProjectInfoFormComponent } from './components/project-info-form/project
 import { AppTopbarModule } from 'src/app/layout/app-topbar.module';
 import { PaginatorModule } from 'primeng/paginator';
 import { ProjectListComponent } from './components/project-list/project-list.component';
+import { ProjectEarningCriteriaComponent } from './components/project-earning-criteria/project-earning-criteria.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ProjectListComponent } from './components/project-list/project-list.com
     ProjectListComponent,
     ProjectItemCardComponent,
     ProjectInfoFormComponent,
+    ProjectEarningCriteriaComponent,
   ],
   imports: [
     CommonModule,
