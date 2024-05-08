@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CredentialComponent } from './credential.component';
+import { CollectionListComponent } from './collection-list.component';
 import { describe, beforeEach, it } from 'node:test';
 
-describe('SystemAdminComponent', () => {
-  let component: CredentialComponent;
-  let fixture: ComponentFixture<CredentialComponent>;
+describe('CollectionListComponent', () => {
+  let component: CollectionListComponent;
+  let fixture: ComponentFixture<CollectionListComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CredentialComponent]
+      declarations: [CollectionListComponent]
     });
-    fixture = TestBed.createComponent(CredentialComponent);
+    fixture = TestBed.createComponent(CollectionListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

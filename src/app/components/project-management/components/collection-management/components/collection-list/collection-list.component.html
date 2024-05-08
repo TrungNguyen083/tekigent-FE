@@ -1,0 +1,18 @@
+<div class="flex">
+    <div class="flex justify-between w-full">
+        <div class="flex gap-2">
+            <tekigent-screen-filter (getSearchValue)="searchValue($event)"></tekigent-screen-filter>
+            <p-dropdown class="bg-white" [options]="collectionDropdown" dropdownIcon="pi pi-angle-down"></p-dropdown>
+        </div>
+        <p-button icon="pi pi-plus" styleClass="p-button-sm" label="New Collection"
+            (click)="openAddCollectionModal()"></p-button>
+    </div>
+
+</div>
+<div class="mt-3">
+    <tekigent-table (pagingInfo)="onPageChange($event)" [isPaginationShown]="true" [isPaginationShown]="true" [table]="tableData" [contentRef]="contentRef">
+        <ng-template #contentRef let-rowData>
+            <collection-item [collection]="rowData"></collection-item>
+        </ng-template>
+    </tekigent-table>
+</div>

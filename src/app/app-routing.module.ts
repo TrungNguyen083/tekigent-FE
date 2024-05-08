@@ -27,13 +27,6 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'credential',
-        loadChildren: () =>
-          import('./components/credential/credential.module').then(
-            m => m.SystemAdminModule,
-          ),
-      },
-      {
         path: 'project-management',
         loadChildren: () =>
           import('./components/project-management/project-management.module').then(
@@ -41,10 +34,10 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'new-project',
+        path: 'collection-management',
         loadChildren: () =>
-          import('./components/project-management/project-management.module').then(
-            m => m.ProjectManagementModule,
+          import('./components/project-management/components/collection-management/collection-management.module').then(
+            m => m.CollectionManagementModule,
           ),
       },
       {

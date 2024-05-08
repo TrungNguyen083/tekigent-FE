@@ -49,7 +49,7 @@ export class EmployeeFormComponent implements OnInit {
     private notificationService: NotificationService,
     private employeeService: EmployeeManagementService,
     private store: Store,
-  ) {}
+  ) { }
 
   get currentContract() {
     return this.addEmployeeForm.get('currentContract')?.value;
