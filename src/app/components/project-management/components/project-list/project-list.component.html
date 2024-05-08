@@ -9,7 +9,7 @@
             dropdownIcon="pi pi-angle-down"></p-dropdown>
     </div>
     <div class="flex gap-2">
-        <p-dropdown placeholder="Manage" [options]="fiterDropDown" dropdownIcon="pi pi-angle-down"></p-dropdown>
+        <p-dropdown placeholder="Manage" [options]="fiterDropDown" dropdownIcon="pi pi-angle-down" (onChange)="onManageDropdownChange($event)"></p-dropdown>
         <a [routerLink]="['new-project']">
             <p-button label="Create Project" icon="pi pi-plus"></p-button>
         </a>

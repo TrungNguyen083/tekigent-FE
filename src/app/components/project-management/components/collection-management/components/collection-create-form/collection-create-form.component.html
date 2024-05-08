@@ -1,0 +1,16 @@
+<form action="" [formGroup]="createCollection" (ngSubmit)="onSubmit()">
+    <div class="grid gap-6">
+        <div>
+            <label class="control-label" for="">Collection Name</label>
+            <input class="w-full" pInputText formControlName="collectionName" placeholder="Enter collection name" />
+        </div>
+        <div>
+            <label class="control-label" for="">Description (Optional)</label>
+            <textarea class="w-full" rows="3" cols="30" pInputTextarea formControlName="collectionDecription"
+                placeholder="Enter description"></textarea>
+        </div>
+    </div>
+    <div class="mt-4 text-right">
+        <button [loading]="isLoading" type="submit" pButton label="Create"></button>
+    </div>
+</form>

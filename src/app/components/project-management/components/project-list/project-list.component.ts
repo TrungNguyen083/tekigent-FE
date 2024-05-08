@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { PagingInfo } from '../../../share/models/pagingInfo.model';
 import { TekigentTable } from '../../../share/models/tekigent-table.model';
+import { Router } from '@angular/router';
 
 const collectionDropdown = [
   {
@@ -103,6 +104,8 @@ const projects = [
 })
 export class ProjectListComponent {
 
+  constructor(private router: Router) {}
+
   table: TekigentTable<unknown> = {
     page: 1,
     first: 0,
@@ -132,4 +135,11 @@ export class ProjectListComponent {
   projectStatus = projectStatus;
   fiterDropDown = fiterDropDown;
   projects = projects;
+
+  onManageDropdownChange(event: any) {
+    if (event.value === 1) { // Assuming 'Collections' has value 1
+      this.router.navigate(['/collection-management']);
+      // console.log("Click into this")
+    }
+  }
 }

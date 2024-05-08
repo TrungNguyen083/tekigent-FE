@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProjectManagementComponent } from './project-management.component';
 import { ProjectInfoFormComponent } from './components/project-info-form/project-info-form.component';
 import { ProjectListComponent } from './components/project-list/project-list.component';
+import { CollectionListComponent } from './components/collection-management/components/collection-list/collection-list.component';
 
 const routes: Routes = [{
   path: '',
@@ -16,6 +17,10 @@ const routes: Routes = [{
     {
       path: 'new-project',
       component: ProjectInfoFormComponent
+    },
+    {
+      path: 'collection-management',
+      component: CollectionListComponent
     }
   ]
 }];
