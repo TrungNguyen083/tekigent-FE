@@ -1,0 +1,14 @@
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center mx-auto">
+    <app-course-item *ngFor="let course of courses" [course]="course"></app-course-item>
+</div>
+<div class="flex justify-between items-center">
+    <span class="ml-4">Showing {{table.first}} to
+        {{
+        table.rows! * table.page! > table.totalRecord!
+        ? table.totalRecord
+        : table.rows! * table.page!
+        }}
+        of {{ table.totalRecord }} entries</span>
+    <p-paginator (onPageChange)="onPageChange($event)" [first]="currentPagingInfo.first" [rows]="currentPagingInfo.rows"
+        [totalRecords]="currentPagingInfo.totalRecord"></p-paginator>
+</div>

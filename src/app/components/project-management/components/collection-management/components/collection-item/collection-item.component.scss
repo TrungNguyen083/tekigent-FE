@@ -1,12 +1,15 @@
-.completion-status-box {
-    background-color: #f4fafaff;
-}
-.evaluation-card {
-    border-width: 2px;
-}
-.evaluation-status-tag {
-    border-radius: 50px;
-}
-.pi.pi-file {
-    @apply text-2xl;
-}
+  :host ::ng-deep {
+    display: contents;
+
+    .action-col {
+      @apply flex justify-center;
+    }
+  }
+
+  :host ::ng-deep .p-datatable-tbody td {
+    padding: 1rem !important;
+  }
+
+  .pi-folder-open {
+    @apply text-4xl;
+  }

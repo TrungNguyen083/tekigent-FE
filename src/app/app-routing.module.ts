@@ -32,6 +32,12 @@ const routes: Routes = [
           import('./components/project-management/project-management.module').then(
             m => m.ProjectManagementModule,
           ),
+      }, {
+        path: 'course-management',
+        loadChildren: () =>
+          import('./components/course-management/course-management.module').then(
+            m => m.CourseManagementModule,
+          ),
       },
       {
         path: 'collection-management',
