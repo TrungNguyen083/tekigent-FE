@@ -9,6 +9,6 @@ export interface ICollectionParams {
 export interface ICollection {
   id?: number;
   name?: string;
-  description?: string,
   noOfProject?: number;
+  description?: string,
 }

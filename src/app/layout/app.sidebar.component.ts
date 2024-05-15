@@ -54,6 +54,11 @@ const dummies: MenuItem[] = [
     name: 'Project Management',
     icon: '',
     path: 'project-management'
+  },
+  {
+    name: 'Course Management',
+    icon: '',
+    path: 'course-management'
   }
 ];
 

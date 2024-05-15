@@ -1,15 +1,25 @@
-<tr class="mt-3 p-selectable-row w-full">
-  <td>{{ collection.name }}</td>
+<tr class="mt-3 p-selectable-row">
   <td>
-    <div class="flex gap-1 items-center">
+    <div class="flex gap-3 items-center">
+      <i class="pi-folder-open pi"></i>
+      <span>
+        {{ collection.name }}
+      </span>
+    </div>
+  </td>
+
+  <td>
+    <div class="flex gap-1 items-center text-primary">
       <span>
         {{collection.noOfProject}} Projects
       </span>
       <i class="pi-angle-double-right pi"></i>
     </div>
   </td>
+  
   <td>{{collection.description}}</td>
-  <td>
+
+  <td class="action-col">
     <p-button icon="pi pi-chart-line" styleClass="p-button-sm" label="View Insights"></p-button>
   </td>
 </tr>

@@ -30,26 +30,26 @@ const collectionsData: ICollection[] = [
   {
     id: 1,
     name: 'Collection 1',
-    description: "Description Of Collection 1",
     noOfProject: 5,
+    description: "Description Of Collection 1",
   },
   {
     id: 2,
     name: 'Collection 2',
-    description: "Description Of Collection 2",
     noOfProject: 5,
+    description: "Description Of Collection 2",
   },
   {
     id: 3,
     name: 'Collection 3',
-    description: "Description Of Collection 3",
     noOfProject: 5,
+    description: "Description Of Collection 3",
   },
   {
     id: 4,
     name: 'Collection 4',
-    description: "Description Of Collection 4",
     noOfProject: 5,
+    description: "Description Of Collection 4",
   },
   
 ];
