@@ -18,8 +18,8 @@ export class EmployeeDashboardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.url.subscribe(url => {
-    });
+    // this.route.url.subscribe(url => {
+    // });
   }
 
   onActiveItemChange(item: MenuItem): void {
