@@ -47,6 +47,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'student-management/:id',
+        loadComponent: () =>
+          import('./components/student-management/student-management.component').then(
+            m => m.StudentManagementComponent,
+          ),
+      },
+      {
         path: 'dashboard',
         loadChildren: () =>
           import('./components/hr-dashboard/hr-dashboard.module').then(

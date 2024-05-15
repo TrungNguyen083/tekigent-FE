@@ -9,6 +9,11 @@ export interface ICourse {
     noOfMembers: number;
 }
 
+export interface ICourseResponse{
+    id: number;
+    courseName: string;
+}
+
 export interface ITurtor {
     id: number;
     tutorName: string;
