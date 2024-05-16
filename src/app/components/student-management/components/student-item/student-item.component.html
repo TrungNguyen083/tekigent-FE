@@ -1,1 +1,24 @@
-<p>student-item works!</p>
+<tr class="mt-3 p-selectable-row">
+    <td>
+        <div class="flex items-center pl-2">
+            <!-- <hrms-avatar [imgSrc]="prependImage(employee.imageSource.imagePath)" shape="circle" size="normal"></hrms-avatar> -->
+
+            <img *ngIf="student.imgSrc" class="avatar-img" style="background: #cde9eaff; border-radius: 60px"
+                [src]="student.imgSrc" [alt]="student.firstName" />
+
+            <img *ngIf="!student.imgSrc" class="avatar-img" style="background: #cde9eaff; border-radius: 60px"
+                [src]="defaultImg" [alt]="student.firstName" />
+            <a class="text-black ml-2 name">{{ student.firstName }} {{
+                student.lastName }}</a>
+        </div>
+    </td>
+    <td>
+        <a class="ml-1 text-primary underline" [href]="'mailto:' + student.email">{{ student.email }}</a>
+        <span *ngIf="!student.email"></span>
+    </td>
+    <td>{{ student.phoneNo ?? 'Not have phone number' }}</td>
+    <td>{{ student.address ?? 'Not have address' }}</td>
+    <td class="action-col">
+        <p-button icon="pi pi-verified" styleClass="p-button-sm" label="Award"></p-button>
+    </td>
+</tr>
