@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { IStudent, IStudentListResponse, IStudentParams } from '../../models/student-management.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { ShareModule } from 'src/app/components/share/share.module';
@@ -10,8 +10,10 @@ import { TekigentTable } from 'src/app/components/share/models/tekigent-table.mo
 import { defaultTablePagination } from 'src/app/constants/app.constant';
 import { studentTableCols } from '../../constants/student-management.constant';
 import { StudentItemComponent } from '../student-item/student-item.component';
+import { configPagination } from 'src/app/utils/configPagination';
+import { PaginatedData } from 'src/app/models/global.model';
 
-const listStudentData: IStudentListResponse[] = [
+const listCourseStudent: IStudentListResponse[] = [
   {
     id: 1,
     course: {
@@ -23,7 +25,8 @@ const listStudentData: IStudentListResponse[] = [
         id: 1,
         firstName: "Nguyen",
         lastName: "Nguyen",
-        email: "nguyennguyen@gmail.com"
+        email: "nguyennguyen@gmail.com",
+        imgSrc: "https://avatars.design/wp-content/uploads/2022/09/male-bald-team-avatars-photo-to-illustration.png"
       },
       {
         id: 2,
@@ -229,7 +232,6 @@ const listStudentData: IStudentListResponse[] = [
   imports: [CommonModule, ButtonModule, TableModule, ShareModule, StudentItemComponent]
 })
 export class StudentListComponent implements OnInit {
-  
   tableData: TekigentTable<IStudent> = {
     ...defaultTablePagination,
     data: {
@@ -239,12 +241,13 @@ export class StudentListComponent implements OnInit {
   };
 
   listStudent?: IStudentListResponse;
+  studentsPagi!: PaginatedData<IStudent>;
   courseId!: number;
   gapPageNumber = 1;
 
   studentParams: IStudentParams = { pageNo: 1, pageSize: 10 };
 
-  constructor(private route: ActivatedRoute,) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -254,10 +257,32 @@ export class StudentListComponent implements OnInit {
         this.courseId = +id;
       }
     });
+
+    const listStudentPagination: PaginatedData<IStudent> = {
+      pagination: {
+        pageNo: 1,
+        pageSize: 10,
+        totalPages: Math.ceil((this.listStudent?.students?.length ?? 0) / 10),
+        totalItems: this.listStudent?.students?.length ?? 0,
+      },
+      data: this.listStudent?.students ?? []
+    };
+
+    const pagination = configPagination(listStudentPagination.pagination);
+    const data = {
+      ...pagination,
+      data: {
+        header: [...this.tableData.data.header],
+        body: listStudentPagination.data,
+      },
+    };
+
+    this.tableData = data;
+    this.studentsPagi = listStudentPagination;
   }
 
   getStudentListByCourseId(courseId: number): IStudentListResponse | undefined {
-    return listStudentData.find(item => item.course.id === courseId);
+    return listCourseStudent.find(item => item.course.id === courseId);
   }
 
   searchValue(search: string): void {
@@ -286,8 +311,12 @@ export class StudentListComponent implements OnInit {
     };
     // this.getEmployees();
   }
-  
+
   reward() {
     throw new Error('Method not implemented.');
+  }
+
+  goBack() {
+    this.router.navigate(['/course-management']);
   }
 }
