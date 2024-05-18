@@ -1,3 +1,4 @@
-export interface IProjectManagement {
+export interface IProject {
+    id: number;
     name: string;
 }
