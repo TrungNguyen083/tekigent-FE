@@ -54,6 +54,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'credential',
+        loadComponent: () =>
+          import('./components/credential/credential.component').then(
+            m => m.CredentialComponent,
+          ),
+      },
+      {
         path: 'dashboard',
         loadChildren: () =>
           import('./components/hr-dashboard/hr-dashboard.module').then(

@@ -261,7 +261,7 @@ export class StudentListComponent implements OnInit {
     const listStudentPagination: PaginatedData<IStudent> = {
       pagination: {
         pageNo: 1,
-        pageSize: 10,
+        pageSize: 15,
         totalPages: Math.ceil((this.listStudent?.students?.length ?? 0) / 10),
         totalItems: this.listStudent?.students?.length ?? 0,
       },
@@ -305,7 +305,7 @@ export class StudentListComponent implements OnInit {
     this.studentParams = {
       ...this.studentParams,
       // pagingInfo: {
-      //   ...this.employeeParams.pagingInfo,
+      //   ...this.studentParams.pagingInfo,
       //   pageNo: e.page + this.gapPageNumber,
       // },
     };
