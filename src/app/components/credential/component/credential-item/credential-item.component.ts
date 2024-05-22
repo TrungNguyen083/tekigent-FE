@@ -32,4 +32,11 @@ export class CredentialItemComponent {
       console.log(this.credentialIds);
     }
   }
+
+  getStatusIcon(status: number, baseClass: string): string {
+    if (status === 0) return `${baseClass}`;
+    if (status === 1) return `${baseClass} text-green-500`;
+    if (status === 2) return `pi-clock text-red-500`;
+    return '';
+  }
 }
