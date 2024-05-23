@@ -6,6 +6,21 @@ import { LayoutService } from './services/app.layout.service';
 
 const dummies: MenuItem[] = [
   {
+    name: 'Credential',
+    icon: 'pi pi-globe mx-auto',
+    path: 'credential'
+  },
+  {
+    name: 'Project Management',
+    icon: 'pi pi-briefcase mx-auto',
+    path: 'project-management'
+  },
+  {
+    name: 'Course Management',
+    icon: 'pi pi-book mx-auto',
+    path: 'course-management'
+  },
+  {
     name: 'Dashboard',
     icon: '',
     path: 'dashboard',
@@ -45,21 +60,7 @@ const dummies: MenuItem[] = [
     icon: '',
     path: 'evaluation-cycle-management'
   },
-  {
-    name: 'Credential',
-    icon: '',
-    path: 'credential'
-  },
-  {
-    name: 'Project Management',
-    icon: '',
-    path: 'project-management'
-  },
-  {
-    name: 'Course Management',
-    icon: '',
-    path: 'course-management'
-  }
+  
 ];
 
 @Component({

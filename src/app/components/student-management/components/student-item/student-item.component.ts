@@ -1,16 +1,11 @@
-import { CommonModule } from '@angular/common';
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import { IStudent } from '../../models/student-management.model';
-import { ButtonModule } from 'primeng/button';
-import { CheckboxChangeEvent, CheckboxModule } from 'primeng/checkbox';
-import { FormsModule } from '@angular/forms';
+import { CheckboxChangeEvent } from 'primeng/checkbox';
 
 @Component({
   selector: 'app-student-item',
   templateUrl: './student-item.component.html',
-  styleUrls: ['./student-item.component.scss'],
-  standalone: true,
-  imports: [CommonModule, ButtonModule, CheckboxModule, FormsModule]
+  styleUrls: ['./student-item.component.scss']
 })
 export class StudentItemComponent implements OnInit{
 

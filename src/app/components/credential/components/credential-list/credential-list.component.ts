@@ -1,23 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ICredential, ICredentialParams } from '../../models/credential.model';
-import { ButtonModule } from 'primeng/button';
-import { TableModule } from 'primeng/table';
-import { ShareModule } from 'src/app/components/share/share.module';
 import { PageChangeEvent } from 'src/app/components/share/models/pagingInfo.model';
-import { CredentialItemComponent } from '../credential-item/credential-item.component';
 import { PaginatedData } from 'src/app/models/global.model';
 import { TekigentTable } from 'src/app/components/share/models/tekigent-table.model';
 import { defaultTablePagination } from 'src/app/constants/app.constant';
 import { credentialTableCols, engagement, status } from '../../constants/credential.constant';
 import { configPagination } from 'src/app/utils/configPagination';
-import { MultiSelectModule } from 'primeng/multiselect';
 
 @Component({
   selector: 'app-credential-list',
   templateUrl: './credential-list.component.html',
-  styleUrls: ['./credential-list.component.scss'],
-  standalone: true,
-  imports: [ButtonModule, TableModule, ShareModule, CredentialItemComponent, MultiSelectModule]
+  styleUrls: ['./credential-list.component.scss']
 })
 export class CredentialListComponent implements OnInit {
   //Filter mock data:
