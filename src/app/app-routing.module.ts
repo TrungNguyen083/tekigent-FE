@@ -48,16 +48,16 @@ const routes: Routes = [
       },
       {
         path: 'student-management/:id',
-        loadComponent: () =>
-          import('./components/student-management/student-management.component').then(
-            m => m.StudentManagementComponent,
+        loadChildren: () =>
+          import('./components/student-management/student-management.module').then(
+            m => m.StudentManagementModule,
           ),
       },
       {
         path: 'credential',
-        loadComponent: () =>
-          import('./components/credential/credential.component').then(
-            m => m.CredentialComponent,
+        loadChildren: () =>
+          import('./components/credential/credential.module').then(
+            m => m.CredentialModule,
           ),
       },
       {

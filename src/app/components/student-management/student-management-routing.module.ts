@@ -7,6 +7,12 @@ const routes: Routes = [
     path: ':id',
     component: StudentManagementComponent,
     data: { breadcrumbs: ['Student Management'] },
+    children: [
+      {
+        path: ':id',
+        component: StudentManagementComponent,
+      }
+    ]
   },
 ];
 

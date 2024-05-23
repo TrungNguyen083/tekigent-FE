@@ -1,15 +1,10 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { IStudent, IStudentListResponse, IStudentParams } from '../../models/student-management.model';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ButtonModule } from 'primeng/button';
-import { TableModule } from 'primeng/table';
-import { ShareModule } from 'src/app/components/share/share.module';
 import { PageChangeEvent } from 'src/app/components/share/models/pagingInfo.model';
 import { TekigentTable } from 'src/app/components/share/models/tekigent-table.model';
 import { defaultTablePagination } from 'src/app/constants/app.constant';
 import { studentTableCols } from '../../constants/student-management.constant';
-import { StudentItemComponent } from '../student-item/student-item.component';
 import { configPagination } from 'src/app/utils/configPagination';
 import { PaginatedData } from 'src/app/models/global.model';
 
@@ -227,9 +222,7 @@ const listCourseStudent: IStudentListResponse[] = [
 @Component({
   selector: 'app-student-list',
   templateUrl: './student-list.component.html',
-  styleUrls: ['./student-list.component.scss'],
-  standalone: true,
-  imports: [CommonModule, ButtonModule, TableModule, ShareModule, StudentItemComponent]
+  styleUrls: ['./student-list.component.scss']
 })
 export class StudentListComponent implements OnInit {
   tableData: TekigentTable<IStudent> = {
