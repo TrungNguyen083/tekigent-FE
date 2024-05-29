@@ -18,7 +18,6 @@ import { StudentManagementComponent } from './student-management.component';
     StudentManagementComponent,
     StudentListComponent,
     StudentItemComponent,
-    StudentItemComponent,
   ],
   imports: [
     StudentManagementRoutingModule,

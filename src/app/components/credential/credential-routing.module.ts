@@ -10,10 +10,6 @@ const routes: Routes = [
     data: { breadcrumbs: ['Credential'] },
     children: [
       {
-        path: '',
-        component: CredentialComponent,
-      },
-      {
         path: 'detail/:id',
         component: CredentialDetailComponent,
       },
