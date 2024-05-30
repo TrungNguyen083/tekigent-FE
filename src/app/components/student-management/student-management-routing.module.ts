@@ -4,14 +4,11 @@ import { StudentManagementComponent } from './student-management.component';
 
 const routes: Routes = [
   {
-    path: ':id',
+    path: '',
     component: StudentManagementComponent,
     data: { breadcrumbs: ['Student Management'] },
     children: [
-      {
-        path: ':id',
-        component: StudentManagementComponent,
-      }
+      
     ]
   },
 ];

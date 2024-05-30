@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import { ICredential } from '../../models/credential.model';
 import { CheckboxChangeEvent } from 'primeng/checkbox';
 import { Router } from '@angular/router';
@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
   templateUrl: './credential-item.component.html',
   styleUrls: ['./credential-item.component.scss']
 })
-export class CredentialItemComponent {
+export class CredentialItemComponent implements OnInit {
 
-  @HostBinding('class') hostClass = 'tekigent-student-item';
+  @HostBinding('class') hostClass = 'tekigent-credential-item';
   @Input() credential!: ICredential;
   defaultImg = 'assets/images/profile-image-default.jpg';
   checked = false;

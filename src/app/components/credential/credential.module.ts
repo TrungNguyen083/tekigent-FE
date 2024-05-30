@@ -27,12 +27,11 @@ import { CredentialDetailComponent } from './components/credential-detail/creden
     CredentialRoutingModule,
     CommonModule,
     AppTopbarModule,
-    ButtonModule,
     TableModule,
     ShareModule,
+    FormsModule,
     MultiSelectModule,
     CheckboxModule,
-    FormsModule,
     ButtonModule,
     RouterModule
   ]

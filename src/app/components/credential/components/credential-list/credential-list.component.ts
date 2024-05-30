@@ -6,6 +6,7 @@ import { TekigentTable } from 'src/app/components/share/models/tekigent-table.mo
 import { defaultTablePagination } from 'src/app/constants/app.constant';
 import { credentialTableCols, engagement, status } from '../../constants/credential.constant';
 import { configPagination } from 'src/app/utils/configPagination';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-credential-list',
@@ -31,6 +32,7 @@ export class CredentialListComponent implements OnInit {
   credentialParams: ICredentialParams = { pageNo: 1, pageSize: 10 };
 
   selectedCredential = 0;
+  filterForm!: FormGroup;
 
   ngOnInit(): void {
     const pagination = configPagination(credentialPagination.pagination);
