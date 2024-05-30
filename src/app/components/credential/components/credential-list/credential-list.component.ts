@@ -7,6 +7,7 @@ import { defaultTablePagination } from 'src/app/constants/app.constant';
 import { credentialTableCols, engagement, status } from '../../constants/credential.constant';
 import { configPagination } from 'src/app/utils/configPagination';
 import { FormGroup } from '@angular/forms';
+import { projectsData } from 'src/app/components/project-management/components/project-list/project-list.component';
 
 @Component({
   selector: 'app-credential-list',
@@ -85,7 +86,7 @@ export class CredentialListComponent implements OnInit {
 }
 
 
-const credentialData: ICredential[] = [
+export const credentialData: ICredential[] = [
   {
     id: 567696,
     recipient: {
@@ -94,10 +95,7 @@ const credentialData: ICredential[] = [
       lastName: "Nguyen",
       email: "nguyen@gmail.com",
     },
-    project: {
-      id: 1,
-      name: "Project 1",
-    },
+    project: projectsData[2],
     issueDate: "May 18, 2024",
     publishStatus: 2,
     linkedinStatus: 0,
@@ -112,10 +110,7 @@ const credentialData: ICredential[] = [
       lastName: "Doe",
       email: "john.doe@gmail.com",
     },
-    project: {
-      id: 2,
-      name: "Project 2",
-    },
+    project: projectsData[3],
     issueDate: "May 19, 2024",
     publishStatus: 0,
     linkedinStatus: 0,
@@ -130,10 +125,7 @@ const credentialData: ICredential[] = [
       lastName: "Smith",
       email: "jane.smith@gmail.com",
     },
-    project: {
-      id: 3,
-      name: "Project 3",
-    },
+    project: projectsData[0],
     issueDate: "May 20, 2024",
     publishStatus: 1,
     viewStatus: 0,
@@ -148,10 +140,7 @@ const credentialData: ICredential[] = [
       lastName: "Johnson",
       email: "alice.johnson@gmail.com",
     },
-    project: {
-      id: 4,
-      name: "Project 4",
-    },
+    project: projectsData[1],
     issueDate: "May 21, 2024",
     publishStatus: 1,
     viewStatus: 1,
@@ -166,10 +155,7 @@ const credentialData: ICredential[] = [
       lastName: "Brown",
       email: "bob.brown@gmail.com",
     },
-    project: {
-      id: 5,
-      name: "Project 5",
-    },
+    project: projectsData[2],
     issueDate: "May 22, 2024",
     publishStatus: 0,
     linkedinStatus: 0,
@@ -184,10 +170,7 @@ const credentialData: ICredential[] = [
       lastName: "Davis",
       email: "charlie.davis@gmail.com",
     },
-    project: {
-      id: 1,  // Same project as item 1
-      name: "Project 1",
-    },
+    project: projectsData[3],
     issueDate: "May 23, 2024",
     publishStatus: 1,
     viewStatus: 1,
@@ -202,10 +185,7 @@ const credentialData: ICredential[] = [
       lastName: "Evans",
       email: "diana.evans@gmail.com",
     },
-    project: {
-      id: 2,  // Same project as item 2
-      name: "Project 2",
-    },
+    project: projectsData[0],
     issueDate: "May 24, 2024",
     publishStatus: 1,
     viewStatus: 0,
@@ -220,10 +200,7 @@ const credentialData: ICredential[] = [
       lastName: "Foster",
       email: "edward.foster@gmail.com",
     },
-    project: {
-      id: 3,  // Same project as item 3
-      name: "Project 3",
-    },
+    project: projectsData[1],
     issueDate: "May 25, 2024",
     publishStatus: 0,
     linkedinStatus: 1,
@@ -238,10 +215,7 @@ const credentialData: ICredential[] = [
       lastName: "Green",
       email: "fiona.green@gmail.com",
     },
-    project: {
-      id: 4,  // Same project as item 4
-      name: "Project 4",
-    },
+    project: projectsData[2],
     issueDate: "May 26, 2024",
     publishStatus: 1,
     viewStatus: 0,
@@ -256,10 +230,7 @@ const credentialData: ICredential[] = [
       lastName: "Hill",
       email: "george.hill@gmail.com",
     },
-    project: {
-      id: 5,  // Same project as item 5
-      name: "Project 5",
-    },
+    project: projectsData[3],
     issueDate: "May 27, 2024",
     publishStatus: 1,
     viewStatus: 1,
