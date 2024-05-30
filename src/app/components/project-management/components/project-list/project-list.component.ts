@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { PagingInfo } from '../../../share/models/pagingInfo.model';
 import { TekigentTable } from '../../../share/models/tekigent-table.model';
 import { Router } from '@angular/router';
+import { IProject } from '../../models/project-management.model';
 
 const collectionDropdown = [
   {
@@ -59,40 +60,44 @@ const fiterDropDown = [
   },
 ];
 
-const projects = [
+export const projectsData: IProject[] = [
   {
+    id: 1,
     name: 'Scrum course',
     identifierName: 'Trong Dao',
     credentialsNo: 20,
     unpublishedNo: 5,
-    status: 'Fully Configured',
+    status: 1,
     lastUpdated: 'Mar 28, 2024',
     certificateImage: "https://think.edu.vn/wp-content/uploads/2022/01/diploma-la-gi.jpg"
   },
   {
+    id: 2,
     name: 'Backend Fundamentals',
     identifierName: 'Viet Dang',
     credentialsNo: 20,
     unpublishedNo: 5,
-    status: 'Configured not complete',
+    status: 0,
     lastUpdated: 'Mar 28, 2024',
     certificateImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0XfjPa75d3BmkF77tgE38OPc4NtyaE0nooLC6C5WxbA&s"
   },
   {
+    id: 3,
     name: 'Backend Advanced',
     identifierName: 'Trong Dao',
     credentialsNo: 20,
     unpublishedNo: 5,
-    status: 'Fully Configured',
+    status: 1,
     lastUpdated: 'Mar 28, 2024',
     certificateImage: "https://fullstack.edu.vn/images/f8-certificate.png"
   },
   {
+    id:4,
     name: 'Backend Advanced',
     identifierName: 'Trong Dao',
     credentialsNo: 20,
     unpublishedNo: 5,
-    status: 'Fully Configured',
+    status: 1,
     lastUpdated: 'Mar 28, 2024',
     certificateImage: "https://marketplace.canva.com/EAFHBiEZGD8/1/0/1600w/canva-red-and-yellow-minimalist-employee-of-the-month-certificate-67ATPnoOO0M.jpg"
   },
@@ -111,7 +116,7 @@ export class ProjectListComponent {
     first: 0,
     rows: 5,
     pageCount: 5,
-    totalRecord: projects.length,
+    totalRecord: projectsData.length,
     data: {
       header: [],
       body: [],
@@ -134,7 +139,7 @@ export class ProjectListComponent {
   appearanceDropdown = appearanceDropdown;
   projectStatus = projectStatus;
   fiterDropDown = fiterDropDown;
-  projects = projects;
+  projects = projectsData;
 
   onManageDropdownChange(event: any) {
     if (event.value === 1) { // Assuming 'Collections' has value 1
