@@ -1,7 +1,9 @@
+import { ITurtor } from "../../course-management/models/course-management.model";
+
 export interface IProject {
     id: number;
     name: string;
-    identifierName: string;
+    identifier: ITurtor;
     credentialsNo: number;
     unpublishedNo: number;
     status: number;
