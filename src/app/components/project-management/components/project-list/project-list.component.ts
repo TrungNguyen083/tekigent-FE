@@ -3,6 +3,7 @@ import { PagingInfo } from '../../../share/models/pagingInfo.model';
 import { TekigentTable } from '../../../share/models/tekigent-table.model';
 import { Router } from '@angular/router';
 import { IProject } from '../../models/project-management.model';
+import { tutorsData } from 'src/app/components/course-management/components/course-list/course-list.component';
 
 const collectionDropdown = [
   {
@@ -64,7 +65,7 @@ export const projectsData: IProject[] = [
   {
     id: 1,
     name: 'Scrum course',
-    identifierName: 'Trong Dao',
+    identifier: tutorsData[0],
     credentialsNo: 20,
     unpublishedNo: 5,
     status: 1,
@@ -74,7 +75,7 @@ export const projectsData: IProject[] = [
   {
     id: 2,
     name: 'Backend Fundamentals',
-    identifierName: 'Viet Dang',
+    identifier: tutorsData[1],
     credentialsNo: 20,
     unpublishedNo: 5,
     status: 0,
@@ -84,7 +85,7 @@ export const projectsData: IProject[] = [
   {
     id: 3,
     name: 'Backend Advanced',
-    identifierName: 'Trong Dao',
+    identifier: tutorsData[0],
     credentialsNo: 20,
     unpublishedNo: 5,
     status: 1,
@@ -94,7 +95,7 @@ export const projectsData: IProject[] = [
   {
     id:4,
     name: 'Backend Advanced',
-    identifierName: 'Trong Dao',
+    identifier: tutorsData[1],
     credentialsNo: 20,
     unpublishedNo: 5,
     status: 1,
