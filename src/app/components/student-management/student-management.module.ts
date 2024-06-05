@@ -10,6 +10,7 @@ import { StudentItemComponent } from './components/student-item/student-item.com
 import { StudentListComponent } from './components/student-list/student-list.component';
 import { StudentManagementRoutingModule } from './student-management-routing.module';
 import { StudentManagementComponent } from './student-management.component';
+import { AwardFormComponent } from './components/award-form/award-form.component';
 
 
 
@@ -18,6 +19,7 @@ import { StudentManagementComponent } from './student-management.component';
     StudentManagementComponent,
     StudentListComponent,
     StudentItemComponent,
+    AwardFormComponent,
   ],
   imports: [
     StudentManagementRoutingModule,
