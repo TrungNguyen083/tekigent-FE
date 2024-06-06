@@ -3,6 +3,7 @@ import { IStudent } from '../../models/student-management.model';
 import { CheckboxChangeEvent } from 'primeng/checkbox';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { AwardFormComponent } from '../award-form/award-form.component';
+import { ConfirmationService } from 'primeng/api';
 
 @Component({
   selector: 'app-student-item',
@@ -23,7 +24,7 @@ export class StudentItemComponent implements OnInit {
   }
 
   constructor(
-    public dialogService: DialogService,
+    public dialogService: DialogService, private confirmationService: ConfirmationService
   ) { }
 
 
@@ -36,12 +37,26 @@ export class StudentItemComponent implements OnInit {
     }
   }
 
-  openAwardModel(student: IStudent) {
+  confirmAward(student: IStudent) {
+    this.confirmationService.confirm({
+      message: 'Are you sure to give award to ' + student.firstName + ' ' + student.lastName + '?',
+      header: 'Award Confirmation',
+      icon: 'pi pi-gift',
+      accept: () => {
+        this.openAwardModal(student);
+      },
+      reject: () => {
+
+      }
+    });
+  }
+
+  openAwardModal(student: IStudent) {
     this.ref = this.dialogService.open(AwardFormComponent, {
       header: 'Award Credential',
       contentStyle: { overflow: 'auto' },
       width: '60vw',
-      data: {student: student}
+      data: { student: student }
     });
   }
 }

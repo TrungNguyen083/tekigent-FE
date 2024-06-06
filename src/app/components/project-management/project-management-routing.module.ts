@@ -14,7 +14,7 @@ const routes: Routes = [{
       component: ProjectListComponent,
     },
     {
-      path: 'new-project',
+      path: 'project-form',
       component: ProjectInfoFormComponent
     },
   ]
