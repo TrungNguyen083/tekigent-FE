@@ -5,12 +5,14 @@ import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
 import { TableModule } from 'primeng/table';
 import { AppTopbarModule } from 'src/app/layout/app-topbar.module';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ShareModule } from '../share/share.module';
 import { StudentItemComponent } from './components/student-item/student-item.component';
 import { StudentListComponent } from './components/student-list/student-list.component';
 import { StudentManagementRoutingModule } from './student-management-routing.module';
 import { StudentManagementComponent } from './student-management.component';
 import { AwardFormComponent } from './components/award-form/award-form.component';
+import { ConfirmationService } from 'primeng/api';
 
 
 
@@ -22,6 +24,7 @@ import { AwardFormComponent } from './components/award-form/award-form.component
     AwardFormComponent,
   ],
   imports: [
+    ConfirmDialogModule,
     StudentManagementRoutingModule,
     AppTopbarModule,
     CommonModule,
@@ -30,6 +33,7 @@ import { AwardFormComponent } from './components/award-form/award-form.component
     ButtonModule,
     CheckboxModule,
     FormsModule
-  ]
+  ],
+  providers: [ConfirmationService]
 })
 export class StudentManagementModule { }

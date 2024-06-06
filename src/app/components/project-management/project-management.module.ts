@@ -11,6 +11,7 @@ import { AppTopbarModule } from 'src/app/layout/app-topbar.module';
 import { PaginatorModule } from 'primeng/paginator';
 import { ProjectListComponent } from './components/project-list/project-list.component';
 import { ProjectEarningCriteriaComponent } from './components/project-earning-criteria/project-earning-criteria.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { ProjectEarningCriteriaComponent } from './components/project-earning-cr
   imports: [
     CommonModule,
     ProjectManagementRoutingModule,
+    ReactiveFormsModule,
     ButtonModule,
     DropdownModule,
     AppTopbarModule,
