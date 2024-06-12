@@ -70,7 +70,11 @@ export const projectsData: IProject[] = [
     unpublishedNo: 5,
     status: 1,
     lastUpdated: 'Mar 28, 2024',
-    certificateImage: "https://think.edu.vn/wp-content/uploads/2022/01/diploma-la-gi.jpg"
+    certificateImage: "https://think.edu.vn/wp-content/uploads/2022/01/diploma-la-gi.jpg",
+    courseWebsite: "scrum.com",
+    description: "Description for Scrum course",
+    skills: "Planning, Teamwork, ...",
+    primary: "Certificate"
   },
   {
     id: 2,
@@ -80,7 +84,11 @@ export const projectsData: IProject[] = [
     unpublishedNo: 5,
     status: 0,
     lastUpdated: 'Mar 28, 2024',
-    certificateImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0XfjPa75d3BmkF77tgE38OPc4NtyaE0nooLC6C5WxbA&s"
+    certificateImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0XfjPa75d3BmkF77tgE38OPc4NtyaE0nooLC6C5WxbA&s",
+    courseWebsite: "backendfundamental.com",
+    description: "Description for Backend Fundamental Course",
+    skills: "Java Core, How to use Stream API, DB, ....",
+    primary: "Badge"
   },
   {
     id: 3,
@@ -90,17 +98,25 @@ export const projectsData: IProject[] = [
     unpublishedNo: 5,
     status: 1,
     lastUpdated: 'Mar 28, 2024',
-    certificateImage: "https://fullstack.edu.vn/images/f8-certificate.png"
+    certificateImage: "https://fullstack.edu.vn/images/f8-certificate.png",
+    courseWebsite: "backendadvanced.com",
+    description: "Description for Backend Advanced Course",
+    skills: "Spring boot Framework, GraphQL API, ...",
+    primary: "Certificate"
   },
   {
     id:4,
-    name: 'Backend Advanced',
+    name: 'Frontend Advanced',
     identifier: tutorsData[1],
     credentialsNo: 20,
     unpublishedNo: 5,
     status: 1,
     lastUpdated: 'Mar 28, 2024',
-    certificateImage: "https://marketplace.canva.com/EAFHBiEZGD8/1/0/1600w/canva-red-and-yellow-minimalist-employee-of-the-month-certificate-67ATPnoOO0M.jpg"
+    certificateImage: "https://marketplace.canva.com/EAFHBiEZGD8/1/0/1600w/canva-red-and-yellow-minimalist-employee-of-the-month-certificate-67ATPnoOO0M.jpg",
+    courseWebsite: "frontendAdvanced.com",
+    description: "Description for Frontend Advanced",
+    skills: "HTML, SCSS, Tailwind, Angular Framework",
+    primary: "Certificate"
   },
 ];
 @Component({
