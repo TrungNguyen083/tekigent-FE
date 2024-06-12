@@ -76,7 +76,7 @@
                 <div class="flex gap-4">
                     <div class="flex ml-16 border border-dashed relative">
                         <img class="max-w-sm rounded-lg"
-                            src="https://v2.dashboard.accredible.com/assets/images/groups/certificate_placeholder.png"
+                            [src]="project.certificateImage ? project.certificateImage : 'https://v2.dashboard.accredible.com/assets/images/groups/certificate_placeholder.png'"
                             alt="certificate">
                         <button class="absolute top-2 right-2 mt-2 mr-2 bg-gray-200 hover:bg-gray-300 rounded p-2">
                             <i class="pi pi-pencil p-2"></i>
@@ -84,7 +84,7 @@
                     </div>
                     <div class="flex ml-36 border border-dashed relative">
                         <img class="max-w-sm rounded-lg"
-                            src="https://v2.dashboard.accredible.com/assets/images/groups/badge_placeholder.png"
+                            [src]="project.badgeImage ? project.badgeImage : 'https://v2.dashboard.accredible.com/assets/images/groups/badge_placeholder.png'"
                             alt="badge">
                         <button class="absolute top-2 right-2 mt-2 mr-2 bg-gray-200 hover:bg-gray-300 rounded p-2">
                             <i class="pi pi-pencil p-2"></i>

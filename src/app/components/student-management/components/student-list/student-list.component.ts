@@ -239,6 +239,8 @@ export class StudentListComponent implements OnInit {
   gapPageNumber = 1;
 
   studentParams: IStudentParams = { pageNo: 1, pageSize: 10 };
+  selectedStudents = new Set<any>();
+  selectedStudentsCount = 0;
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 
@@ -303,6 +305,15 @@ export class StudentListComponent implements OnInit {
       // },
     };
     // this.getEmployees();
+  }
+
+  onSelectionChange(event: any) {
+    if (event.checked) {
+      this.selectedStudents.add(event.student);
+    } else {
+      this.selectedStudents.delete(event.student);
+    }
+    this.selectedStudentsCount = this.selectedStudents.size;
   }
 
   reward() {

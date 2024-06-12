@@ -2,7 +2,7 @@
     display: contents;
 
     .action-col {
-        @apply flex justify-center;
+        @apply inline-block;
     }
 
     td {
