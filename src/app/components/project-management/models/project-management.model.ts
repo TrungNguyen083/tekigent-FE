@@ -1,16 +1,13 @@
-import { ITurtor } from "../../course-management/models/course-management.model";
+import { ICollection } from "../components/collection-management/models/collection-management.model";
 
 export interface IProject {
     id: number;
     name: string;
-    identifier: ITurtor;
+    description: string;
+    projectBgImage: string;
+    collection?: ICollection;
+    lastUpdated: string;
+    status: number;
     credentialsNo: number;
     unpublishedNo: number;
-    status: number;
-    lastUpdated: string;
-    certificateImage: string;
-    courseWebsite: string;
-    description: string;
-    skills: string;
-    primary: string;
 }

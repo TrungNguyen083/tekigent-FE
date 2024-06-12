@@ -22,14 +22,8 @@ export class ProjectInfoFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.project = history.state;
-    console.log("Project: ", this.project);
     this.initForm();
-    if (this.hasRequiredProjectProperties(this.project)) {
-      console.log("True");
-      this.patchFormValues();
-    } else {
-      console.log("False");
-    }
+    if (this.hasRequiredProjectProperties(this.project)) this.patchFormValues();
   }
 
   hasRequiredProjectProperties(project: any): boolean {

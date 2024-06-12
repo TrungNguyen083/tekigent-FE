@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, HostBinding, Input, OnInit, Output } from '@angular/core';
 import { IStudent } from '../../models/student-management.model';
 import { CheckboxChangeEvent } from 'primeng/checkbox';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
@@ -14,6 +14,7 @@ export class StudentItemComponent implements OnInit {
 
   @HostBinding('class') hostClass = 'tekigent-student-item';
   @Input() student!: IStudent;
+  @Output() selectionChange = new EventEmitter<any>();
   defaultImg = 'assets/images/profile-image-default.jpg';
   checked = false;
   studentIds!: number[];
@@ -28,13 +29,9 @@ export class StudentItemComponent implements OnInit {
   ) { }
 
 
-  onCheckChange(e: CheckboxChangeEvent) {
-    const { checked } = e;
-    if (checked) {
-      console.log(this.studentIds);
-    } else {
-      console.log(this.studentIds);
-    }
+  onCheckChange(e: CheckboxChangeEvent, student: IStudent) {
+    this.checked = e.checked;
+    this.selectionChange.emit({ student, checked: this.checked });
   }
 
   confirmAward(student: IStudent) {

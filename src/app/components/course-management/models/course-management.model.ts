@@ -1,12 +1,21 @@
+import { IProject } from "../../project-management/models/project-management.model";
+
 export interface ICourse {
     id: number;
+    project: IProject;
     courseName: string;
+    identifier: ITurtor;
+    courseWebsite: string;
     description: string;
-    tutor: ITurtor;
+    skills: string;
+    primary: string;
+    bgImgSrc: string;
+    certificateImage: string,
+    badgeImage?: string;
     publishAt: string;
-    imgSrc: string;
     like: number;
     noOfMembers: number;
+    lastUpdated: string;
 }
 
 export interface ICourseResponse{

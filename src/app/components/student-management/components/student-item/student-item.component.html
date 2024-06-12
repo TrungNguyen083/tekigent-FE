@@ -1,7 +1,7 @@
 <tr class="mt-3 p-selectable-row">
     <td class="text-center">
         <p-checkbox [(ngModel)]="checked" [binary]="true" inputId="binary"
-            (onChange)="onCheckChange($event)"></p-checkbox>
+            (onChange)="onCheckChange($event, student)"></p-checkbox>
     </td>
     <td>
         <div class="flex items-center pl-2">
@@ -20,8 +20,8 @@
     </td>
     <td>{{ student.phoneNo ?? 'Not have phone number' }}</td>
     <td>{{ student.address ?? 'Not have address' }}</td>
-    <td class="action-col">
-        <button class="hover:border-primary bg-white flex h-100 items-center border py-2 px-4 rounded text-sm"
+    <td class="text-center">
+        <button class="action-col hover:border-primary bg-white flex h-100 items-center border py-2 px-4 rounded text-sm"
         (click)="confirmAward(student)">
             Award
         </button>

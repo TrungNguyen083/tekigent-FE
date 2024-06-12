@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, HostBinding, Input, OnInit, Output } from '@angular/core';
 import { ICredential } from '../../models/credential.model';
 import { CheckboxChangeEvent } from 'primeng/checkbox';
 import { Router } from '@angular/router';
@@ -12,6 +12,7 @@ export class CredentialItemComponent implements OnInit {
 
   @HostBinding('class') hostClass = 'tekigent-credential-item';
   @Input() credential!: ICredential;
+  @Output() selectionChange = new EventEmitter<any>();
   defaultImg = 'assets/images/profile-image-default.jpg';
   checked = false;
   credentialIds!: number[];
@@ -23,13 +24,9 @@ export class CredentialItemComponent implements OnInit {
   }
 
 
-  onCheckChange(e: CheckboxChangeEvent) {
-    const { checked } = e;
-    if (checked) {
-      console.log(this.credentialIds);
-    } else {
-      console.log(this.credentialIds);
-    }
+  onCheckChange(e: CheckboxChangeEvent, credential: ICredential) {
+    this.checked = e.checked;
+    this.selectionChange.emit({ credential, checked: this.checked });
   }
 
   getStatusIcon(status: number, baseClass: string): string {

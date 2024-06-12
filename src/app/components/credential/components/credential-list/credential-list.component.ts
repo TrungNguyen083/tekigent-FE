@@ -15,6 +15,7 @@ import { projectsData } from 'src/app/components/project-management/components/p
   styleUrls: ['./credential-list.component.scss']
 })
 export class CredentialListComponent implements OnInit {
+
   //Filter mock data:
   collectionOptions = collections;
   projectOptions = projects;
@@ -31,8 +32,8 @@ export class CredentialListComponent implements OnInit {
   gapPageNumber = 1;
   credentialsPagi!: PaginatedData<ICredential>;
   credentialParams: ICredentialParams = { pageNo: 1, pageSize: 10 };
-
-  selectedCredential = 0;
+  selectedCredentials = new Set<any>();
+  selectedCredentialsCount = 0;
   filterForm!: FormGroup;
 
   ngOnInit(): void {
@@ -82,6 +83,15 @@ export class CredentialListComponent implements OnInit {
 
   onFilter() {
     throw new Error('Method not implemented.');
+  }
+
+  onSelectionChange(event: any) {
+    if (event.checked) {
+      this.selectedCredentials.add(event.credential);
+    } else {
+      this.selectedCredentials.delete(event.credential);
+    }
+    this.selectedCredentialsCount = this.selectedCredentials.size;
   }
 }
 

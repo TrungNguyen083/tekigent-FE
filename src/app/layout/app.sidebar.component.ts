@@ -20,47 +20,6 @@ const dummies: MenuItem[] = [
     icon: 'pi pi-book mx-auto',
     path: 'course-management'
   },
-  {
-    name: 'Dashboard',
-    icon: '',
-    path: 'dashboard',
-  },
-  {
-    name: 'My Dashboard',
-    icon: '',
-    path: 'my-dashboard',
-  },
-  {
-    name: 'User Management',
-    icon: '',
-    path: 'user-management',
-  },
-  {
-    name: 'Employee Management',
-    icon: '',
-    path: 'employee-management',
-  },
-  {
-    name: 'Competency Management',
-    icon: '',
-    path: 'competency-management',
-  },
-  {
-    name: 'Performance Management',
-    icon: '',
-    path: 'performance-management',
-  },
-  {
-    name: 'System Admin',
-    icon: '',
-    path: 'system-admin',
-  },
-  {
-    name: 'Evaluation Cycle Management',
-    icon: '',
-    path: 'evaluation-cycle-management'
-  },
-  
 ];
 
 @Component({
