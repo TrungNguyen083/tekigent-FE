@@ -9,4 +9,8 @@ export interface IProject {
     status: number;
     lastUpdated: string;
     certificateImage: string;
+    courseWebsite: string;
+    description: string;
+    skills: string;
+    primary: string;
 }
