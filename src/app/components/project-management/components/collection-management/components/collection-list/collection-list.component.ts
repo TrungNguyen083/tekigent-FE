@@ -26,30 +26,30 @@ const collectionDropdown = [
   },
 ];
 
-const collectionsData: ICollection[] = [
+export const collectionsData: ICollection[] = [
   {
     id: 1,
-    name: 'Collection 1',
+    name: 'Backend Collection',
     noOfProject: 5,
-    description: "Description Of Collection 1",
+    description: "Description Of Backend Collection",
   },
   {
     id: 2,
-    name: 'Collection 2',
+    name: 'Frontend Collection',
     noOfProject: 5,
-    description: "Description Of Collection 2",
+    description: "Description Of Frontend Collection",
   },
   {
     id: 3,
-    name: 'Collection 3',
+    name: 'QC Collection',
     noOfProject: 5,
-    description: "Description Of Collection 3",
+    description: "Description Of QC Collection",
   },
   {
     id: 4,
-    name: 'Collection 4',
+    name: 'DA Collection',
     noOfProject: 5,
-    description: "Description Of Collection 4",
+    description: "Description Of DA Collection",
   },
   
 ];

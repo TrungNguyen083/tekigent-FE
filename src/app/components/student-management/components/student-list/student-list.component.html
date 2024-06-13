@@ -5,9 +5,16 @@
     </button>
     <h1 class="text-2xl">Students of {{listStudent?.course?.courseName}}</h1>
   </div>
-  <p-button icon="pi pi-plus" styleClass="p-button-sm" label="Bulk Award"
-    [class.opacity-50]="selectedStudentsCount === 0" [disabled]="selectedStudentsCount === 0"
-    (click)="reward()"></p-button>
+  <div class="flex gap-2">
+    <button
+        class="hover:bg-primary hover:text-white flex items-center text-primary border border-primary font-bold py-2 px-4 rounded text-sm"
+        (click)="navigateWithCourse()">
+        Course Settings <i class="pl-2 pi pi-wrench"></i>
+    </button>
+    <p-button icon="pi pi-plus" styleClass="p-button-sm" label="Bulk Award"
+      [class.opacity-50]="selectedStudentsCount === 0" [disabled]="selectedStudentsCount === 0"
+      (click)="reward()"></p-button>
+  </div>
 </div>
 <div class="card-container mt-2">
   <div class="flex gap-4 items-center">

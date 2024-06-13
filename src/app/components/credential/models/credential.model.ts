@@ -1,10 +1,10 @@
-import { IProject } from "../../project-management/models/project-management.model";
+import { ICourse } from "../../course-management/models/course-management.model";
 import { IStudent } from "../../student-management/models/student-management.model";
 
 export interface ICredential {
     id: number;
     recipient: IStudent;
-    project: IProject;
+    course: ICourse;
     issueDate?: string;
     expiryDate?: string;
     publishStatus: number;

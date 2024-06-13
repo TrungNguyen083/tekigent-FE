@@ -2,14 +2,14 @@
     <button (click)="goBack()">
       <i class="pi pi-angle-left font-bold"></i>
     </button>
-    <h1 class="text-2xl text-primaryText">Project Form</h1>
+    <h1 class="text-2xl text-primaryText">Course Form</h1>
   </div>
-<form action="" [formGroup]="addProjectForm" (ngSubmit)="onSubmit()">
+<form action="" [formGroup]="addCourseForm" (ngSubmit)="onSubmit()">
     <div class="flex flex-col gap-4">
         <div class="flex justify-between">
             <div class="flex flex-col w-96">
-                <h1 class="font-bold text-primaryText mb-2">Project Information</h1>
-                <span class="text-sm max-w-xs">Set up the details for your project</span>
+                <h1 class="font-bold text-primaryText mb-2">Course Information</h1>
+                <span class="text-sm max-w-xs">Set up the details for your course</span>
             </div>
             <div class="flex flex-1 flex-col gap-4">
                 <div>
@@ -65,7 +65,7 @@
             class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
         <div class="flex justify-between">
             <div class="flex flex-col w-96">
-                <h1 class="font-bold text-primaryText mb-2">Project Appearance</h1>
+                <h1 class="font-bold text-primaryText mb-2">Course Appearance</h1>
                 <span class="text-sm max-w-xs">Your group needs a badge or certificate design to be displayed. It can
                     have
                     both. If you add both a certificate and a badge, select which you want to be the Primary
@@ -76,7 +76,7 @@
                 <div class="flex gap-4">
                     <div class="flex ml-16 border border-dashed relative">
                         <img class="max-w-sm rounded-lg"
-                            [src]="project.certificateImage ? project.certificateImage : 'https://v2.dashboard.accredible.com/assets/images/groups/certificate_placeholder.png'"
+                            [src]="course.certificateImage ? course.certificateImage : 'https://v2.dashboard.accredible.com/assets/images/groups/certificate_placeholder.png'"
                             alt="certificate">
                         <button class="absolute top-2 right-2 mt-2 mr-2 bg-gray-200 hover:bg-gray-300 rounded p-2">
                             <i class="pi pi-pencil p-2"></i>
@@ -84,7 +84,7 @@
                     </div>
                     <div class="flex ml-36 border border-dashed relative">
                         <img class="max-w-sm rounded-lg"
-                            [src]="project.badgeImage ? project.badgeImage : 'https://v2.dashboard.accredible.com/assets/images/groups/badge_placeholder.png'"
+                            [src]="course.badgeImage ? course.badgeImage : 'https://v2.dashboard.accredible.com/assets/images/groups/badge_placeholder.png'"
                             alt="badge">
                         <button class="absolute top-2 right-2 mt-2 mr-2 bg-gray-200 hover:bg-gray-300 rounded p-2">
                             <i class="pi pi-pencil p-2"></i>
@@ -122,8 +122,8 @@
             <div class="flex flex-col flex-1">
                 <div class="bg-white rounded">
                     <div *ngFor="let index of criteriaIndices; let i = index">
-                        <project-earning-criteria [index]="i"
-                            (deleteCriteria)="removeEarningCriteria($event)"></project-earning-criteria>
+                        <course-earning-criteria [index]="i"
+                            (deleteCriteria)="removeEarningCriteria($event)"></course-earning-criteria>
                     </div>
                 </div>
                 <button (click)="addEarningCriteria()"

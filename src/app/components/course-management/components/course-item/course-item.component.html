@@ -4,7 +4,7 @@
         class="absolute opacity-0 top-0 right-0 left-0 bottom-0">Course Link</a>
     <div class="relative mb-4 rounded-2xl">
         <img class="h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
-            [src]="course.imgSrc" alt="">
+            [src]="course.bgImgSrc" alt="">
         <div class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="h-5 w-5 text-red-700">
@@ -35,11 +35,11 @@
     <div class="flex justify-between items-center w-full pb-4 mb-auto">
         <div class="flex text-left">
             <div class="pr-3">
-                <img class="h-12 w-12 rounded-full object-cover" [src]="course.tutor.tutorImgSrc" alt="">
+                <img class="h-12 w-12 rounded-full object-cover" [src]="course.identifier.tutorImgSrc" alt="">
             </div>
             <div class="flex flex-1">
                 <div class="">
-                    <p class="text-sm font-semibold ">{{course.tutor.tutorName}}</p>
+                    <p class="text-sm font-semibold ">{{course.identifier.tutorName}}</p>
                     <p class="text-sm text-gray-500">Published on {{course.publishAt}}</p>
                 </div>
             </div>

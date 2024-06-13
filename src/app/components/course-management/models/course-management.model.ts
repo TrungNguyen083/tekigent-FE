@@ -18,11 +18,6 @@ export interface ICourse {
     lastUpdated: string;
 }
 
-export interface ICourseResponse{
-    id: number;
-    courseName: string;
-}
-
 export interface ITurtor {
     id: number;
     tutorName: string;

@@ -5,7 +5,7 @@ export const credentialTableCols: TableHeader[] = [
   { col: 'Credential ID', field: 'id' },
   { col: 'Status', field: 'status' },
   { col: 'Recepient', field: 'recepient' },
-  { col: 'Project', field: 'project' },
+  { col: 'Course', field: 'course' },
   { col: 'Issue Date', field: 'issueDate' },
   { col: 'Expiry Date', field: 'expiryDate' },
   { col: '', field: 'action' },

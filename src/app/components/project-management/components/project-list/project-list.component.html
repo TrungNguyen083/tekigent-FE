@@ -10,9 +10,8 @@
     </div>
     <div class="flex gap-2">
         <p-dropdown placeholder="Manage" [options]="fiterDropDown" dropdownIcon="pi pi-angle-down" (onChange)="onManageDropdownChange($event)"></p-dropdown>
-        <a [routerLink]="['project-form']">
-            <p-button label="Create Project" icon="pi pi-plus"></p-button>
-        </a>
+        <p-button icon="pi pi-plus" styleClass="p-button-sm" label="New Project"
+            (click)="openAddProjectModal()"></p-button>
     </div>
 </div>
 <div class="mt-4 flex flex-col gap-4">

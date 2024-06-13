@@ -7,14 +7,12 @@ import { defaultTablePagination } from 'src/app/constants/app.constant';
 import { studentTableCols } from '../../constants/student-management.constant';
 import { configPagination } from 'src/app/utils/configPagination';
 import { PaginatedData } from 'src/app/models/global.model';
+import { coursesData } from 'src/app/components/course-management/components/course-list/course-list.component';
 
 const listCourseStudent: IStudentListResponse[] = [
   {
     id: 1,
-    course: {
-      id: 1,
-      courseName: "Backend Fundamental"
-    },
+    course: coursesData[0],
     students: [
       {
         id: 1,
@@ -81,10 +79,7 @@ const listCourseStudent: IStudentListResponse[] = [
   },
   {
     id: 2,
-    course: {
-      id: 2,
-      courseName: "Backend Advanced"
-    },
+    course: coursesData[1],
     students: [
       {
         id: 11,
@@ -150,10 +145,7 @@ const listCourseStudent: IStudentListResponse[] = [
   },
   {
     id: 3,
-    course: {
-      id: 3,
-      courseName: "Frontend Fundamental"
-    },
+    course: coursesData[2],
     students: [
       {
         id: 21,
@@ -322,5 +314,9 @@ export class StudentListComponent implements OnInit {
 
   goBack() {
     this.router.navigate(['/course-management']);
+  }
+
+  navigateWithCourse() {
+    this.router.navigate(['/course-management/course-form'], { state: this.listStudent?.course });
   }
 }
