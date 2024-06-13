@@ -1,4 +1,4 @@
-import { ICourseResponse } from "../../course-management/models/course-management.model";
+import { ICourse } from "../../course-management/models/course-management.model";
 
 export interface IStudent {
     id: number;
@@ -12,7 +12,7 @@ export interface IStudent {
 
 export interface IStudentListResponse {
     id: number;
-    course: ICourseResponse;
+    course: ICourse;
     students: IStudent[];
 }
 

@@ -6,11 +6,6 @@ import { LayoutService } from './services/app.layout.service';
 
 const dummies: MenuItem[] = [
   {
-    name: 'Credential',
-    icon: 'pi pi-globe mx-auto',
-    path: 'credential'
-  },
-  {
     name: 'Project Management',
     icon: 'pi pi-briefcase mx-auto',
     path: 'project-management'
@@ -20,6 +15,12 @@ const dummies: MenuItem[] = [
     icon: 'pi pi-book mx-auto',
     path: 'course-management'
   },
+  {
+    name: 'Credential',
+    icon: 'pi pi-globe mx-auto',
+    path: 'credential'
+  },
+  
 ];
 
 @Component({

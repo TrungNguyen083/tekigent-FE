@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'project-earning-criteria',
-  templateUrl: './project-earning-criteria.component.html',
-  styleUrls: ['./project-earning-criteria.component.scss']
+  selector: 'course-earning-criteria',
+  templateUrl: './course-earning-criteria.component.html',
+  styleUrls: ['./course-earning-criteria.component.scss']
 })
-export class ProjectEarningCriteriaComponent {
+export class CourseEarningCriteriaComponent {
   @Input() index!: number; // Input index of the criteria
   @Output() deleteCriteria = new EventEmitter<number>(); // Output event to delete the criteria
 

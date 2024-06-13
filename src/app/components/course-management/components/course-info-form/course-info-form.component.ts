@@ -1,37 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IProject } from '../../models/project-management.model';
+import { ICourse } from '../../models/course-management.model';
 
 @Component({
-  selector: 'evaluation-cycle-info-form',
-  templateUrl: './project-info-form.component.html',
-  styleUrls: ['./project-info-form.component.scss']
+  selector: 'course-info-form',
+  templateUrl: './course-info-form.component.html',
+  styleUrls: ['./course-info-form.component.scss']
 })
-export class ProjectInfoFormComponent implements OnInit {
+export class CourseInfoFormComponent implements OnInit {
 
 
   criteriaIndices: number[] = [];
-  addProjectForm!: FormGroup;
+  addCourseForm!: FormGroup;
   isLoading = false;
-  project!: IProject;
+  course!: ICourse;
 
   constructor(
     private fb: FormBuilder, private route: ActivatedRoute, private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.project = history.state;
+    this.course = history.state;
     this.initForm();
-    if (this.hasRequiredProjectProperties(this.project)) this.patchFormValues();
+    if (this.hasRequiredProjectProperties(this.course)) this.patchFormValues();
   }
 
-  hasRequiredProjectProperties(project: any): boolean {
-    return project && project.name && project.identifier && project.identifier.tutorName && project.courseWebsite && project.description && project.skills && project.primary;
+  hasRequiredProjectProperties(course: any): boolean {
+    return course && course.courseName && course.identifier && course.identifier.tutorName && course.courseWebsite && course.description && course.skills && course.primary;
   }
 
   initForm() {
-    this.addProjectForm = this.fb.group({
+    this.addCourseForm = this.fb.group({
       displayName: ['', [Validators.required, Validators.maxLength(100)]],
       identifier: ['', [Validators.required, Validators.maxLength(100)]],
       courseWebsite: ['', [Validators.required, Validators.maxLength(100)]],
@@ -43,19 +43,19 @@ export class ProjectInfoFormComponent implements OnInit {
 
   patchFormValues() {
     const formData = {
-      displayName: this.project.name,
-      identifier: this.project.identifier.tutorName,
-      courseWebsite: this.project.courseWebsite,
-      description: this.project.description,
-      skills: this.project.skills,
-      awardType: this.project.primary
+      displayName: this.course.courseName,
+      identifier: this.course.identifier.tutorName,
+      courseWebsite: this.course.courseWebsite,
+      description: this.course.description,
+      skills: this.course.skills,
+      awardType: this.course.primary
     };
 
-    this.addProjectForm.patchValue(formData);
+    this.addCourseForm.patchValue(formData);
   }
 
   goBack() {
-    this.router.navigate(['/project-management']);
+    this.router.navigate(['/course-management']);
   }
 
   onSubmit() {

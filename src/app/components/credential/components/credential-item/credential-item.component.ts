@@ -15,12 +15,11 @@ export class CredentialItemComponent implements OnInit {
   @Output() selectionChange = new EventEmitter<any>();
   defaultImg = 'assets/images/profile-image-default.jpg';
   checked = false;
-  credentialIds!: number[];
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.checked = this.credentialIds.includes(this.credential.id);
+
   }
 
 

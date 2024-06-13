@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProjectInfoFormComponent } from './project-info-form.component';
+import { CourseInfoFormComponent } from './course-info-form.component';
 import { beforeEach, describe, it } from 'node:test';
 
-describe('ProjectInfoFormComponent', () => {
-  let component: ProjectInfoFormComponent;
-  let fixture: ComponentFixture<ProjectInfoFormComponent>;
+describe('CourseInfoFormComponent', () => {
+  let component: CourseInfoFormComponent;
+  let fixture: ComponentFixture<CourseInfoFormComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ProjectInfoFormComponent]
+      declarations: [CourseInfoFormComponent]
     });
-    fixture = TestBed.createComponent(ProjectInfoFormComponent);
+    fixture = TestBed.createComponent(CourseInfoFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

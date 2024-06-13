@@ -6,12 +6,11 @@ import { ProjectManagementComponent } from './project-management.component';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { ProjectItemCardComponent } from './components/project-item-card/project-item-card.component';
-import { ProjectInfoFormComponent } from './components/project-info-form/project-info-form.component';
 import { AppTopbarModule } from 'src/app/layout/app-topbar.module';
 import { PaginatorModule } from 'primeng/paginator';
 import { ProjectListComponent } from './components/project-list/project-list.component';
-import { ProjectEarningCriteriaComponent } from './components/project-earning-criteria/project-earning-criteria.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProjectFormComponent } from './components/project-form/project-form.component';
 
 
 @NgModule({
@@ -19,8 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProjectManagementComponent,
     ProjectListComponent,
     ProjectItemCardComponent,
-    ProjectInfoFormComponent,
-    ProjectEarningCriteriaComponent,
+    ProjectFormComponent,
   ],
   imports: [
     CommonModule,

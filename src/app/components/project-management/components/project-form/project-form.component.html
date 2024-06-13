@@ -1,0 +1,26 @@
+<form [formGroup]="createProject" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Project Name</label>
+      <input id="name" formControlName="name" type="text">
+    </div>
+  
+    <div>
+      <label for="description">Description</label>
+      <input id="description" formControlName="description" type="text">
+    </div>
+  
+    <div>
+      <label for="projectBgImage">Background Image</label>
+      <input id="projectBgImage" type="file" (change)="onFileChange($event)">
+    </div>
+  
+    <div>
+      <label for="collection">Collection</label>
+      <select id="collection" formControlName="collection">
+        <option *ngFor="let collection of collections" [value]="collection.id">{{ collection.name }}</option>
+      </select>
+    </div>
+  
+    <button type="submit" [disabled]="createProject.invalid">Submit</button>
+  </form>
+  

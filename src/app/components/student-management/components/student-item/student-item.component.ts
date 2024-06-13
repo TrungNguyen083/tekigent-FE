@@ -17,11 +17,9 @@ export class StudentItemComponent implements OnInit {
   @Output() selectionChange = new EventEmitter<any>();
   defaultImg = 'assets/images/profile-image-default.jpg';
   checked = false;
-  studentIds!: number[];
   ref!: DynamicDialogRef;
 
   ngOnInit(): void {
-    this.checked = this.studentIds.includes(this.student.id);
   }
 
   constructor(

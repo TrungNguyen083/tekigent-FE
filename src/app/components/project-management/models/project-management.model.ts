@@ -7,7 +7,6 @@ export interface IProject {
     projectBgImage: string;
     collection?: ICollection;
     lastUpdated: string;
-    status: number;
     credentialsNo: number;
     unpublishedNo: number;
 }
