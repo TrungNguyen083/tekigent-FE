@@ -11,6 +11,7 @@ import { PaginatorModule } from 'primeng/paginator';
 import { ProjectListComponent } from './components/project-list/project-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProjectFormComponent } from './components/project-form/project-form.component';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ProjectFormComponent } from './components/project-form/project-form.com
     DropdownModule,
     AppTopbarModule,
     PaginatorModule,
+    InputTextModule,
   ]
 })
 export class ProjectManagementModule { }

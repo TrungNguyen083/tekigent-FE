@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { ProjectFormComponent } from '../project-form/project-form.component';
 
 @Component({
   selector: 'project-item-card',
@@ -9,9 +11,17 @@ import { Router } from '@angular/router';
 export class ProjectItemCardComponent {
 
   @Input() project!: any;
-  constructor(private router: Router) {}
+  ref!: DynamicDialogRef;
+  
+
+  constructor(public dialogService: DialogService,) { }
 
   navigateWithProject() {
-    this.router.navigate(['/project-management/project-form'], { state: this.project });
+      this.ref = this.dialogService.open(ProjectFormComponent, {
+        header: 'Project Form',
+        contentStyle: { overflow: 'auto' },
+        width: '30vw',
+        data: this.project,
+      });
   }
 }

@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { IProject } from '../../models/project-management.model';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { ProjectFormComponent } from '../project-form/project-form.component';
+import { collectionsData } from '../collection-management/components/collection-list/collection-list.component';
 
 const collectionDropdown = [
   {
@@ -65,6 +66,7 @@ const fiterDropDown = [
 export const projectsData: IProject[] = [
   {
     id: 1,
+    collection: collectionsData[1],
     name: 'Backend Fundamentals',
     description: "Description for Backend Fundamental Course",
     projectBgImage: "https://cdn.sanity.io/images/tlr8oxjg/production/884d88c6672936f825ca1aa0683b6e1b80684c0d-1456x816.png?w=3840&q=100&fit=clip&auto=format",
@@ -150,7 +152,7 @@ export class ProjectListComponent {
 
   openAddProjectModal() {
     this.ref = this.dialogService.open(ProjectFormComponent, {
-      header: 'Create project',
+      header: 'Project Form',
       contentStyle: { overflow: 'auto' },
       width: '30vw',
     });

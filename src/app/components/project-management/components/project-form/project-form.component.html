@@ -1,26 +1,34 @@
 <form [formGroup]="createProject" (ngSubmit)="onSubmit()">
+  <div class="grid gap-6">
+
     <div>
-      <label for="name">Project Name</label>
-      <input id="name" formControlName="name" type="text">
+      <label class="control-label">Collection (Optional)</label>
+      <div class="w-full">
+        <p-dropdown class="custom-dd" formControlName="selectedCollection" [options]="collections" optionLabel="name"
+          placeholder="Select Collection"></p-dropdown>
+      </div>
     </div>
-  
+
     <div>
-      <label for="description">Description</label>
-      <input id="description" formControlName="description" type="text">
+      <label class="control-label">Project Name</label>
+      <input class="w-full" pInputText formControlName="name" placeholder="Enter project name">
     </div>
-  
+
     <div>
-      <label for="projectBgImage">Background Image</label>
-      <input id="projectBgImage" type="file" (change)="onFileChange($event)">
+      <label class="control-label">Description</label>
+      <input class="w-full" pInputText formControlName="description" placeholder="Enter project description">
     </div>
-  
+
     <div>
-      <label for="collection">Collection</label>
-      <select id="collection" formControlName="collection">
-        <option *ngFor="let collection of collections" [value]="collection.id">{{ collection.name }}</option>
-      </select>
+      <label class="control-label">Background Image</label>
+      <input class="w-full" type="file" (change)="onFileChange($event)" accept="image/png, image/jpeg">
+      <div *ngIf="imageSrc">
+        <img [src]="imageSrc" alt="Image Preview" class="mt-4 w-full h-auto">
+      </div>
     </div>
-  
-    <button type="submit" [disabled]="createProject.invalid">Submit</button>
-  </form>
-  
+  </div>
+
+  <div class="mt-8 text-right">
+    <button class="m-w-50" [loading]="isLoading" type="submit" pButton label="Save"></button>
+  </div>
+</form>
