@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { IStudent, IStudentListResponse, IStudentParams } from '../../models/student-management.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PageChangeEvent } from 'src/app/components/share/models/pagingInfo.model';
@@ -30,8 +30,9 @@ export class StudentListComponent implements OnInit {
   gapPageNumber = 1;
 
   studentParams: IStudentParams = { pageNo: 1, pageSize: 10 };
-  selectedStudents = new Set<any>();
+  selectedStudents = new Set<IStudent>();
   selectedStudentsCount = 0;
+  uncheckItems = new EventEmitter<void>();
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 
@@ -107,8 +108,17 @@ export class StudentListComponent implements OnInit {
     this.selectedStudentsCount = this.selectedStudents.size;
   }
 
-  reward() {
-    throw new Error('Method not implemented.');
+  bulkAward() {
+    this.selectedStudents.forEach(student => {
+      // Perform publish action for each credential
+      console.log(`Publishing credential with ID: ${student.firstName} ${student.lastName}`);
+      // Implement your publish logic here
+    });
+
+    // Clear selected credentials after publishing
+    this.selectedStudents.clear();
+    this.selectedStudentsCount = 0;
+    this.uncheckItems.emit();
   }
 
   goBack() {

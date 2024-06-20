@@ -4,6 +4,7 @@ import { CheckboxChangeEvent } from 'primeng/checkbox';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { AwardFormComponent } from '../award-form/award-form.component';
 import { ConfirmationService } from 'primeng/api';
+import { StudentListComponent } from '../student-list/student-list.component';
 
 @Component({
   selector: 'app-student-item',
@@ -19,13 +20,15 @@ export class StudentItemComponent implements OnInit {
   checked = false;
   ref!: DynamicDialogRef;
 
-  ngOnInit(): void {
-  }
-
   constructor(
-    public dialogService: DialogService, private confirmationService: ConfirmationService
+    public dialogService: DialogService, private confirmationService: ConfirmationService, private studentList: StudentListComponent
   ) { }
 
+  ngOnInit(): void {
+    this.studentList.uncheckItems.subscribe(() => {
+      this.checked = false;
+    });
+  }
 
   onCheckChange(e: CheckboxChangeEvent, student: IStudent) {
     this.checked = e.checked;
