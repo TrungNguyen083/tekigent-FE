@@ -20,6 +20,10 @@
   <td>{{collection.description}}</td>
 
   <td class="action-col">
-    <p-button icon="pi pi-chart-line" styleClass="p-button-sm" label="View Insights"></p-button>
+    <button
+            class="hover:bg-primary hover:text-white flex items-center text-primary border border-primary font-bold py-2 px-4 rounded text-sm"
+            (click)="navigateWithCollection()">
+            Collection Settings <i class="pl-2 pi pi-wrench"></i>
+          </button>
   </td>
 </tr>

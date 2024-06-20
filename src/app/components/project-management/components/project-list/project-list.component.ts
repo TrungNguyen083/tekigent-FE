@@ -152,7 +152,7 @@ export class ProjectListComponent {
 
   openAddProjectModal() {
     this.ref = this.dialogService.open(ProjectFormComponent, {
-      header: 'Project Form',
+      header: 'Create Project',
       contentStyle: { overflow: 'auto' },
       width: '30vw',
     });
