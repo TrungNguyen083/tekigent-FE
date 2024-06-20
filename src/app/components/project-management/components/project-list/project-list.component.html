@@ -15,16 +15,18 @@
     </div>
 </div>
 <div class="mt-4 flex flex-col gap-4">
-    <project-item-card *ngFor="let project of projects" [project]="project"></project-item-card>
+    <project-item-card *ngFor="let project of paginatedProjects" [project]="project"></project-item-card>
 </div>
-<div class="flex justify-between mt-4 items-center bg-white">
-    <span class="ml-4">Showing {{table.first}} to
+<div class="flex justify-between items-center">
+    <span class="ml-4">Showing {{table.first + 1}} to
         {{
-        table.rows! * table.page! > table.totalRecord!
-        ? table.totalRecord
-        : table.rows! * table.page!
+        (table.first + this.table.rows > table.totalRecord) ? table.totalRecord : (table.first + this.table.rows)
         }}
         of {{ table.totalRecord }} entries</span>
-    <p-paginator (onPageChange)="onPageChange($event)" [first]="currentPagingInfo.first" [rows]="currentPagingInfo.rows"
-        [totalRecords]="currentPagingInfo.totalRecord"></p-paginator>
+    <p-paginator 
+        (onPageChange)="onPageChange($event)" 
+        [first]="table.first" 
+        [rows]="table.rows"
+        [totalRecords]="table.totalRecord"
+    ></p-paginator>
 </div>
