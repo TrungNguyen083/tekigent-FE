@@ -8,7 +8,7 @@ import { collectionHeader } from '../../constants/collection-management.constain
 import { PaginatedData } from 'src/app/models/global.model';
 import { configPagination } from 'src/app/utils/configPagination';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
-import { CollectionCreateFormComponent } from '../collection-create-form/collection-create-form.component';
+import { CollectionFormComponent } from '../collection-form/collection-form.component';
 
 
 const collectionDropdown = [
@@ -139,8 +139,8 @@ export class CollectionListComponent implements OnInit {
   }
 
   openAddCollectionModal() {
-    this.ref = this.dialogService.open(CollectionCreateFormComponent, {
-      header: 'Create profile',
+    this.ref = this.dialogService.open(CollectionFormComponent, {
+      header: 'Create Collection',
       contentStyle: { overflow: 'auto' },
       width: '30vw',
     });

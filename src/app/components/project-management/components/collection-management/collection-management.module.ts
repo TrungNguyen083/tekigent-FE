@@ -10,7 +10,7 @@ import { AppTopbarModule } from 'src/app/layout/app-topbar.module';
 import { PaginatorModule } from 'primeng/paginator';
 import { CollectionListComponent } from './components/collection-list/collection-list.component';
 import { ShareModule } from "../../../share/share.module";
-import { CollectionCreateFormComponent } from './components/collection-create-form/collection-create-form.component';
+import { CollectionFormComponent } from './components/collection-form/collection-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
@@ -21,7 +21,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
         CollectionManagementComponent,
         CollectionListComponent,
         CollectionItemComponent,
-        CollectionCreateFormComponent,
+        CollectionFormComponent,
     ],
     imports: [
         CommonModule,

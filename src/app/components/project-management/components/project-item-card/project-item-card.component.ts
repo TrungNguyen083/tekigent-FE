@@ -18,7 +18,7 @@ export class ProjectItemCardComponent {
 
   navigateWithProject() {
       this.ref = this.dialogService.open(ProjectFormComponent, {
-        header: 'Project Form',
+        header: 'Project Setting',
         contentStyle: { overflow: 'auto' },
         width: '30vw',
         data: this.project,

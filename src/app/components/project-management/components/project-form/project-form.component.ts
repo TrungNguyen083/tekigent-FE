@@ -38,7 +38,6 @@ export class ProjectFormComponent {
 
   loadProjectData() {
     if (this.config.data) {
-      console.log(this.config.data);
       this.createProject.patchValue({
         selectedCollection: this.config.data.collection,
         name: this.config.data.name,

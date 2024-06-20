@@ -23,7 +23,7 @@ export class CourseInfoFormComponent implements OnInit {
   ngOnInit(): void {
     this.course = history.state;
     this.initForm();
-    if (this.hasRequiredProjectProperties(this.course)) this.patchFormValues();
+    this.patchFormValues();
   }
 
   hasRequiredProjectProperties(course: any): boolean {
@@ -42,16 +42,18 @@ export class CourseInfoFormComponent implements OnInit {
   }
 
   patchFormValues() {
-    const formData = {
-      displayName: this.course.courseName,
-      identifier: this.course.identifier.tutorName,
-      courseWebsite: this.course.courseWebsite,
-      description: this.course.description,
-      skills: this.course.skills,
-      awardType: this.course.primary
-    };
+    if (this.hasRequiredProjectProperties(this.course)) {
+      const formData = {
+        displayName: this.course.courseName,
+        identifier: this.course.identifier.tutorName,
+        courseWebsite: this.course.courseWebsite,
+        description: this.course.description,
+        skills: this.course.skills,
+        awardType: this.course.primary
+      };
 
-    this.addCourseForm.patchValue(formData);
+      this.addCourseForm.patchValue(formData);
+    };
   }
 
   goBack() {
