@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { credentialData } from '../credential-list/credential-list.component';
 import { ICredential } from '../../models/credential.model';
+import { credentialData } from '../../constants/credential.constant';
 
 @Component({
   selector: 'app-credential-detail',
